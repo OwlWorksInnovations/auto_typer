@@ -1,6 +1,7 @@
 # auto_typer
-for acellus where you can't copy and paste compiled to exe.
+Paste text into the text-box and press start typing!
 
-should work for newest version of acellus
-
-paste the text in text.txt then run the script and go to acellus you have 3 seconds
+Updated v0.0.0.2
+- Now has a gui interface
+- Fixed the .exe not starting
+- Recompiled to not need any additional files
