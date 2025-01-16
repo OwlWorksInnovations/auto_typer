@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace auto_typer
 {
@@ -16,6 +9,7 @@ namespace auto_typer
         public AutoTyper()
         {
             InitializeComponent();
+            inputBox.Text = "";
         }
 
         private void AutoTyper_Load(object sender, EventArgs e)
@@ -42,9 +36,11 @@ namespace auto_typer
 
             try
             {
+                MessageBox.Show("Program will start typing in 5 seconds.");
+
                 await Task.Delay(5000);
 
-                SendKeys.SendWait(inputBoxText);
+                SendKeys.Send(inputBoxText);
             }
             catch (Exception ex)
             {
@@ -53,6 +49,7 @@ namespace auto_typer
             finally
             {
                 typeBtn.Enabled = true;
+                inputBox.Text = "";
             }
         }
     }
